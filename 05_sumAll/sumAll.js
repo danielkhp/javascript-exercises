@@ -3,9 +3,20 @@ const sumAll = function(int1, int2) {
     return 'ERROR'
   }
 
+  let rangeStart
+  let rangeEnd
+
+  if (int1 > int2) {
+    rangeStart = int2
+    rangeEnd = int1
+  } else {
+    rangeStart = int1
+    rangeEnd = int2
+  }
+
   let sum = 0
 
-  for (let i = int1; i <= int2; i++) {
+  for (let i = rangeStart; i <= rangeEnd; i++) {
     sum += i
   }
 
